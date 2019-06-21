@@ -1,4 +1,4 @@
-import { Model } from '../../build';
+import { Model } from '@nostjs/core';
 
 export default (model: Model) => {
 

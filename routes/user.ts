@@ -1,4 +1,4 @@
-import { Route } from '../../build';
+import { Route } from '@nostjs/core';
 
 const route = new Route('/user/');
 

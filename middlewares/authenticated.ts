@@ -1,4 +1,4 @@
-import { Middleware } from '../../build';
+import { Middleware } from '@nostjs/core';
 
 const middleware = new Middleware('authenticated');
 
