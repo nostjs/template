@@ -4,8 +4,10 @@ import models from './models';
 import middlewares from './middlewares';
 import routes from './routes';
 
-Nost.models = models;
-Nost.middlewares = middlewares;
-Nost.routes = routes;
+const nost = new Nost();
 
-Nost.init();
+nost.models = models;
+nost.middlewares = middlewares;
+nost.routes = routes;
+
+nost.init();
