@@ -1,10 +1,10 @@
 import { Middleware } from '@nostjs/core';
 
-export default class Authenticated extends Middleware {
-  handle() {
-    this.middleware((req, res, next) => {
-      console.log('Authenticated');
-      next();
-    });
-  }
-}
+const middleware = new Middleware('authenticated');
+
+middleware.middleware((req, res, next) => {
+  console.log('Authenticated');
+  next();
+});
+
+export default middleware;

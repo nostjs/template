@@ -1,5 +1,9 @@
 import { Model } from '@nostjs/core';
 
-export default class User extends Model {
-  handle() {}
-}
+const model = new Model('user');
+
+model.schema = {
+  asd: String,
+};
+
+export default model;

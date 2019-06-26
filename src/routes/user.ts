@@ -1,15 +1,15 @@
 import { Route } from '@nostjs/core';
 
-export default class User extends Route {
-  handle() {
-    this.middleware(['authenticated'], () => {
-      this.get(':id', (req, res) => {
-        res.sendStatus(200);
-      });
-      
-      this.post('/', (req, res) => {
-        res.sendStatus(200);
-      });
-    });
-  }
-}
+const route = new Route('user');
+
+route.middleware(['authenticated'], () => {
+  route.get(':id', (req, res) => {
+    res.sendStatus(200);
+  });
+  
+  route.post('/', (req, res) => {
+    res.sendStatus(200);
+  });
+});
+
+export default route;
